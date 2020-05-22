@@ -116,15 +116,15 @@ class DatePicker extends Component {
   }
 
   getDate(date = this.props.date) {
-    const {mode, minDate, maxDate, format = FORMATS[mode]} = this.props;
+    const {mode, minDate, maxDate, defaultDate, format = FORMATS[mode]} = this.props;
 
     // date默认值
     if (!date) {
-      let now = new Date();
+      let dt = defaultDate ? defaultDate : new Date();
       if (minDate) {
         let _minDate = this.getDate(minDate);
 
-        if (now < _minDate) {
+        if (dt < _minDate) {
           return _minDate;
         }
       }
@@ -132,12 +132,16 @@ class DatePicker extends Component {
       if (maxDate) {
         let _maxDate = this.getDate(maxDate);
 
-        if (now > _maxDate) {
+        if (dt > _maxDate) {
           return _maxDate;
         }
       }
 
-      return now;
+      if (dt instanceof Date) {
+        return dt;
+      }
+
+      return Moment(dt).toDate();
     }
 
     if (date instanceof Date) {
