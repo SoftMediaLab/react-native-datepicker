@@ -1,5 +1,5 @@
 {
-  "name": "react-native-datepicker",
+  "name": "@softmedialab/react-native-datepicker",
   "version": "0.0.1",
   "description": "React Native DatePicker component for both Android and iOS, useing DatePickerAndroid, TimePickerAndroid and DatePickerIOS",
   "main": "datepicker.js",
