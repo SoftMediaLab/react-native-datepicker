@@ -33,9 +33,9 @@ let style = StyleSheet.create({
   placeholderDensedText: {
     position: 'absolute',
     transform: [
-      { translateY: -23 },
+      {translateY: -23}
     ],
-    fontSize: 12,
+    fontSize: 12
   },
   datePickerMask: {
     flex: 1,
