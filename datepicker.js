@@ -66,7 +66,8 @@ class DatePicker extends Component {
         this.state.animatedHeight,
         {
           toValue: height,
-          duration: duration
+          duration: duration,
+          useNativeDriver: true,
         }
       ).start();
     } else {
@@ -74,7 +75,8 @@ class DatePicker extends Component {
         this.state.animatedHeight,
         {
           toValue: 0,
-          duration: duration
+          duration: duration,
+          useNativeDriver: true,
         }
       ).start(() => {
         this.setState({modalVisible: visible});
@@ -182,9 +184,14 @@ class DatePicker extends Component {
       );
     }
     return (
+      <>
+      <Text allowFontScaling={allowFontScaling} style={[customStyles.placeholderText, Style.placeholderDensedText]}>
+          {placeholder}
+      </Text>
       <Text allowFontScaling={allowFontScaling} style={[Style.dateText, customStyles.dateText]}>
         {this.getDateStr()}
       </Text>
+      </>
     );
   }
 
