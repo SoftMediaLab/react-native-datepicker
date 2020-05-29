@@ -30,6 +30,13 @@ let style = StyleSheet.create({
   placeholderText: {
     color: '#c9c9c9'
   },
+  placeholderDensedText: {
+    position: 'absolute',
+    transform: [
+      { translateY: -23 },
+    ],
+    fontSize: 12,
+  },
   datePickerMask: {
     flex: 1,
     alignItems: 'flex-end',
