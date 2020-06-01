@@ -399,7 +399,7 @@ class DatePicker extends Component {
                   style={{flex: 1}}
                 >
                   <Animated.View
-                    style={[Style.datePickerCon, {height: this.state.animatedHeight}, customStyles.datePickerCon]}
+                    style={[Style.datePickerCon, {height: /*this.state.animatedHeight*/ 250}, customStyles.datePickerCon]}
                   >
                     <View pointerEvents={this.state.allowPointerEvents ? 'auto' : 'none'}>
                       <DatePickerIOS
