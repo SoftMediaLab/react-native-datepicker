@@ -352,7 +352,8 @@ class DatePicker extends Component {
       cancelBtnTestID,
       confirmBtnTestID,
       allowFontScaling,
-      locale
+      locale,
+      height
     } = this.props;
 
     const dateInputStyle = [
@@ -399,7 +400,7 @@ class DatePicker extends Component {
                   style={{flex: 1}}
                 >
                   <Animated.View
-                    style={[Style.datePickerCon, {height: /*this.state.animatedHeight*/ 250}, customStyles.datePickerCon]}
+                    style={[Style.datePickerCon, {height: /*this.state.animatedHeight*/ height}, customStyles.datePickerCon]}
                   >
                     <View pointerEvents={this.state.allowPointerEvents ? 'auto' : 'none'}>
                       <DatePickerIOS
