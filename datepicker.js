@@ -185,7 +185,7 @@ class DatePicker extends Component {
     }
     return (
       <React.Fragment>
-        <Text allowFontScaling={allowFontScaling} style={[customStyles.placeholderText, Style.placeholderDensedText]}>
+        <Text allowFontScaling={allowFontScaling} style={[customStyles.placeholderText, Style.placeholderDensedText, customStyles.placeholderDensedText]}>
             {placeholder}
         </Text>
         <Text allowFontScaling={allowFontScaling} style={[Style.dateText, customStyles.dateText]}>
